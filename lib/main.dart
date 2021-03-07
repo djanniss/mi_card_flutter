@@ -12,30 +12,41 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
-                color: Colors.white,
-                child: Text('Container 1'),
-              ),
-              SizedBox(
-                width: 20.0,
-              ),
-              Container(
-                color: Colors.blue,
-                child: Text('Container 2'),
-              ),
-              SizedBox(
-                width: 20.0,
-              ),
-              Container(
+                alignment: Alignment.center,
                 color: Colors.red,
-                child: Text('Container 3'),
+                width: 100.0
               ),
+              Container(
+                alignment: Alignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      color: Colors.yellow,
+                      width: 100.0,
+                      height: 100.0,
+                    ),
+                    Container(
+                      color: Colors.green,
+                      width: 100.0,
+                      height: 100.0,
+                    ),
+                  ],
+                ),
+                // no width needed in center widget due to 'spaceBetween'
+              ),
+              Container(
+                alignment: Alignment.center,
+                color: Colors.blue,
+                width: 100.0,
+              )
             ],
-          ),
-        ),
-      ),
+          )
+        )
+      )
     );
   }
 }
